@@ -57,9 +57,12 @@ class PxPayment extends DataObject
         'Processed',
     ];
     
-    /** Payment Express does not like more than 2 digits **/
+    /** Payment Express only likes 2 digits **/
     public function setAmountInput($value) 
     {
-        return $this->setField('AmountInput', round($value, 2));
+        $amount = new NumberFormatter('en_NZ', NumberFormatter::CURRENCY);
+        $amount = $amount->formatCurrency($value, 'NZD');
+
+        return $this->setField('AmountInput', $amount);
     }
 }
