@@ -57,12 +57,9 @@ class PxPayment extends DataObject
         'Processed',
     ];
     
-    /** Payment Express only likes 2 digits **/
+    /** Payment Express only likes 2 digits with no commas in the number **/
     public function setAmountInput($value) 
     {
-        $amount = new NumberFormatter('en_NZ', NumberFormatter::CURRENCY);
-        $amount = $amount->formatCurrency($value, 'NZD');
-
-        return $this->setField('AmountInput', $amount);
+        return $this->setField('AmountInput', str_replace(',', '', number_format($value, 2)));
     }
 }
