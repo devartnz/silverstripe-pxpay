@@ -1,5 +1,5 @@
 {
-	"name": "devartnz/silverstripe-pxpay",
+	"name": "twohill/silverstripe-pxpay",
 	"description": "Payment Express controller",
 	"keywords": [
 		"silverstripe",
@@ -8,7 +8,7 @@
 	"license": "BSD-3-Clause",
 	"minimum-stability": "dev",
 	"type": "silverstripe-vendormodule",
-	"homepage": "https://github.com/devartnz/silverstripe-pxpay",
+	"homepage": "https://github.com/twohill/silverstripe-pxpay",
 	"authors": [
 		{
 			"name": "Al Twohill",
@@ -16,7 +16,7 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/devartnz/silverstripe-pxpay/issues"
+		"issues": "https://github.com/twohill/silverstripe-pxpay/issues"
 	},
 	"require": {
 		"twohill/silverstripe-nestedcontrollers": "^2",
